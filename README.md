@@ -1,36 +1,184 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tirar Visto - Landing Page
 
-## Getting Started
+![Tirar Visto](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
+![React](https://img.shields.io/badge/React-38B2AC?style=for-the-badge&logo=react)
 
-First, run the development server:
+## 📋 Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Landing page desenvolvida como teste técnico para a empresa **NoWeb**. O projeto "Tirar Visto" é uma aplicação web moderna para uma consultoria especializada em processos de visto e passaporte, oferecendo uma experiência completa e intuitiva aos usuários.
+
+### 🎯 Objetivos Alcançados
+
+- ✅ **Código limpo e bem organizado** - Arquitetura modular com componentes reutilizáveis
+- ✅ **Fidelidade ao layout do Figma** - Implementação pixel-perfect do design fornecido
+- ✅ **Responsividade completa** - Funciona perfeitamente em todos os dispositivos
+
+## 🚀 Demonstração
+
+- **[Demo ao vivo](https://tirar-visto-pccguvclx-gabrielgxrcias-projects.vercel.app/)** 
+- **[Repositório GitHub](https://github.com/gabrielgxrcia/tirar-visto)** 
+
+## 🛠️ Tecnologias Utilizadas
+
+### Core
+- **[Next.js 14](https://nextjs.org/)** - Framework React com App Router
+- **[TypeScript](https://www.typescriptlang.org/)** - Type safety 
+- **[Tailwind CSS v4](https://tailwindcss.com/)** - Estilização utility-first
+
+### Bibliotecas
+- **[Framer Motion](https://www.framer.com/motion/)** - Animações 
+- **[Lucide React](https://lucide.dev/)** - Ícones 
+- **[clsx](https://github.com/lukeed/clsx)** + **[tailwind-merge](https://github.com/dcastil/tailwind-merge)** - Gerenciamento de classes
+- **[Radix UI](https://ui.shadcn.com/)** - Componentes shadcn/ui
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── app/                    # App Router (Next.js 14)
+│   ├── layout.tsx         # Layout principal
+│   ├── page.tsx           # Página inicial
+│   └── globals.css        # Estilos globais
+├── components/
+│   ├── ui/                # Componentes base (shadcn/ui)
+│   ├── layout/            # Componentes de layout
+│   │   ├── navigation.tsx # Navegação responsiva
+│   │   └── footer.tsx     # Footer
+│   ├── sections/          # Seções da página
+│   │   ├── hero.tsx       # Hero section
+│   │   ├── stats.tsx      # Estatísticas animadas
+│   │   ├── top-destinations.tsx
+│   │   ├── why-choose-us.tsx
+│   │   ├── trust-section.tsx
+│   │   └── special-package.tsx
+│   ├── shared/            # Componentes compartilhados
+│   │   └── animated-counter.tsx
+│   ├── hero-content.tsx   # Conteúdo do hero
+│   ├── hero-image.tsx     # Imagem do hero
+│   └── video-card.tsx     # Card de vídeo
+├── lib/
+│   ├── tailwind-utilities.ts # Classes reutilizáveis
+│   ├── constants.ts       # Constantes do projeto
+│   └── utils.ts           # Funções utilitárias
+└── types/
+    └── index.ts           # TypeScript interfaces
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🎨 Design System
+- Sistema de cores consistente
+- Tipografia padronizada (Inter)
+- Componentes reutilizáveis
+- Utilities centralizadas para manutenção facilitada
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📱 Responsividade
+- Mobile-first approach
+- Breakpoints otimizados (sm, md, lg, xl, 2xl)
+- Menu hambúrguer para dispositivos móveis
+- Grid system adaptativo
 
-## Learn More
+### ⚡ Performance
+- Otimização de imagens com Next.js Image
+- Lazy loading de componentes
+- Code splitting automático
+- Animações com Framer Motion
 
-To learn more about Next.js, take a look at the following resources:
+### ♿ Acessibilidade
+- Navegação por teclado
+- ARIA labels apropriados
+- Contraste de cores WCAG AA
+- Semântica HTML5 correta
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Como Executar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Pré-requisitos
+- Node.js 18+ 
+- npm ou yarn
 
-## Deploy on Vercel
+### Instalação
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Clone o repositório
+git clone https://github.com/gabrielgxrcia/tirar-visto.git
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Entre no diretório
+cd tirar-visto
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
+```
+
+Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+## 📦 Scripts Disponíveis
+
+```bash
+npm run dev       # Desenvolvimento
+npm run build     # Build de produção
+npm run start     # Executar build
+npm run lint      # Verificar código
+```
+
+## 🎯 Diferenciais Implementados
+
+### 1. **Arquitetura Modular**
+- Componentes pequenos e focados
+- Separação clara de responsabilidades
+- Fácil manutenção e escalabilidade
+
+### 2. **Tailwind Utilities Customizadas**
+```typescript
+// Exemplo de utilities centralizadas
+export const tw = {
+  typography: {
+    h1: "font-inter font-medium text-[#232323] leading-[130.81%]",
+    body: "font-inter font-normal text-base leading-[130.81%]"
+  },
+  buttons: {
+    primary: "bg-[#1B2543] hover:bg-[#243052] text-white rounded-[40px]",
+    secondary: "bg-[#F6C010] hover:bg-[#F6C010]/90 text-[#232323]"
+  }
+}
+```
+
+### 3. **Animações Suaves**
+- Contadores animados nas estatísticas
+- Hover effects nos cards
+- Transições entre estados
+
+### 4. **Grid de Destinos Complexo**
+- Layout assimétrico fiel ao Figma
+- Cards de tamanhos diferentes (280x240 e 280x280)
+- Totalmente responsivo com fallback para mobile
+
+## 🔍 Pontos de Destaque
+
+1. **Pixel Perfect** - Implementação exata do design do Figma
+2. **Clean Code** - Código limpo, comentado e bem estruturado
+3. **Type Safety** - TypeScript em todo o projeto
+5. **SEO Ready** - Meta tags e estrutura otimizada
+
+## 📝 Notas de Desenvolvimento
+
+- Utilizei a abordagem mobile-first para garantir melhor experiência em dispositivos móveis
+- O grid de destinos mantém posicionamento absoluto no desktop conforme design, mas usa CSS Grid em mobile
+- Implementei um sistema de utilities para facilitar manutenção futura
+- Todos os componentes são totalmente tipados com TypeScript
+
+## 🤝 Considerações Finais
+
+Este projeto foi desenvolvido com foco em qualidade, manutenibilidade e fidelidade ao design. Cada decisão técnica foi tomada pensando em performance, acessibilidade e experiência do usuário.
+
+Agradeço a oportunidade de demonstrar minhas habilidades técnicas e estou à disposição para discutir as decisões tomadas durante o desenvolvimento.
+
+---
+
+**Desenvolvido por:** [Gabriel Garcia]  
+**Data:** [05/06/2025]  
+**Contato:** [gabrielgrazeffi123@gmail.com]
