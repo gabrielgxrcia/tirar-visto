@@ -17,7 +17,7 @@ Landing page desenvolvida como teste técnico para a empresa **NoWeb**. O projet
 
 ## 🚀 Demonstração
 
-- **[Demo ao vivo](https://tirar-visto-pccguvclx-gabrielgxrcias-projects.vercel.app/)** 
+- **[Demo ao vivo](https://tirar-visto-phi.vercel.app/)** 
 - **[Repositório GitHub](https://github.com/gabrielgxrcia/tirar-visto)** 
 
 ## 🛠️ Tecnologias Utilizadas
