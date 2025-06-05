@@ -21,6 +21,8 @@ interface NavigationProps {
 const navItems = ["Home", "Quem somos", "Serviços", "Contato"] as const
 type NavItem = typeof navItems[number]
 
+import Link from "next/link"
+
 const Navigation = memo<NavigationProps>(({ logoSrc, activeItem = "Home" }) => {
   const [open, setOpen] = useState(false)
 
@@ -39,7 +41,7 @@ const Navigation = memo<NavigationProps>(({ logoSrc, activeItem = "Home" }) => {
         aria-label="Navegação principal"
       >
         {/* Logo */}
-        <a 
+        <Link 
           href="/"
           className={cn(
             "flex relative flex-shrink-0",
@@ -57,9 +59,9 @@ const Navigation = memo<NavigationProps>(({ logoSrc, activeItem = "Home" }) => {
             priority
             className="object-contain object-left"
           />
-        </a>
+        </Link>
 
-        {/* Responsivo desktop */}
+        {/* Desktop Navigation */}
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className={cn(
             "flex flex-row items-center",
@@ -77,6 +79,7 @@ const Navigation = memo<NavigationProps>(({ logoSrc, activeItem = "Home" }) => {
                     "bg-transparent whitespace-nowrap",
                     "font-inter text-base leading-[130.81%]",
                     activeItem === item ? "font-bold" : "font-normal",
+                    // Specific widths
                     item === "Home" && "w-[70px]",
                     item === "Quem somos" && "w-[123px]",
                     item === "Serviços" && "w-[90px]",
@@ -91,7 +94,7 @@ const Navigation = memo<NavigationProps>(({ logoSrc, activeItem = "Home" }) => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Tablet */}
+        {/* Tablet Navigation */}
         <NavigationMenu className="hidden md:flex lg:hidden">
           <NavigationMenuList className="flex items-center gap-4">
             {navItems.map((item) => (
@@ -115,7 +118,7 @@ const Navigation = memo<NavigationProps>(({ logoSrc, activeItem = "Home" }) => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Mobile */}
+        {/* Mobile Navigation */}
         <div className="md:hidden flex-shrink-0 relative z-10">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>

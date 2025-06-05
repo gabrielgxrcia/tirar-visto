@@ -4,11 +4,10 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface HeroContentProps {
-  decorativeImageSrc: string
   videoCardImageSrc: string
 }
 
-export const HeroContent = ({ decorativeImageSrc, videoCardImageSrc }: HeroContentProps) => {
+export const HeroContent = ({ videoCardImageSrc }: HeroContentProps) => {
   const contentText = {
     paragraph: "Com uma equipe altamente treinada, nós temos todos os procedimentos para que seu processo seja o mais tranquilo e rápido.",
     complement: "Uma consultoria completa para você e sua família não ter nenhuma preocupação na sua viagem."

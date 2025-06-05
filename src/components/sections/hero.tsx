@@ -6,16 +6,14 @@ import { cn } from "@/lib/tailwind-utilities"
 
 interface HeroProps {
   logoSrc?: string
-  decorativeImageSrc?: string
   videoCardImageSrc?: string
   backgroundImageSrc?: string
 }
 
 export const Hero = ({
   logoSrc = "/images/logo-tirarvisto.png",
-  decorativeImageSrc = "/images/hero-bg.png",
-  videoCardImageSrc = "/images/bruna.png",
   backgroundImageSrc = "/images/hero-bg.png",
+  videoCardImageSrc = "/images/bruna.png",
 }: HeroProps) => {
   return (
     <section
@@ -32,7 +30,6 @@ export const Hero = ({
           <div className="w-full relative">
             <Navigation logoSrc={logoSrc} />
             <HeroContent 
-              decorativeImageSrc={decorativeImageSrc} 
               videoCardImageSrc={videoCardImageSrc} 
             />
 

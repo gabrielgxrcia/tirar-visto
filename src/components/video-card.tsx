@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 
 interface VideoCardProps {
   imageSrc: string
@@ -15,11 +16,15 @@ export const VideoCard: React.FC<VideoCardProps> = ({ imageSrc, title, subtitle,
   return (
     <div className={`${baseClasses} ${className}`}>
       {/* Imagem */}
-      <img
-        src={imageSrc || "/placeholder.svg?height=110&width=191"}
-        alt={title}
-        className="w-full sm:w-[191px] h-[110px] rounded-[16px] object-cover flex-none"
-      />
+      <div className="relative w-full sm:w-[191px] h-[110px] rounded-[16px] overflow-hidden flex-none">
+        <Image
+          src={imageSrc || "/placeholder.svg"}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, 191px"
+        />
+      </div>
 
       {/* Container do conteúdo */}
       <div className="flex flex-row justify-between items-end w-full px-0 pb-0">
